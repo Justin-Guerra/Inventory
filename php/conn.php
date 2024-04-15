@@ -1,9 +1,9 @@
 <?php
 
-$db_host = "sql201.infinityfree.com";
-$db_user = "if0_36343879";
-$db_pass = "HC5nhSaGTOv";
-$db_name = "if0_36343879_inventory";
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "products";
 
 //ARRAY USED TO RETURN RESPONSE TO FRONTEND
 $response = array();
