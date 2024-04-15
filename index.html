@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link href="../css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/index.css">
     <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
     <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
     <title>Store</title>
@@ -24,8 +24,8 @@
                                   </button>
                                   <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalNewProduct" href="#">Add</a></li>
-                                    <li><a class="dropdown-item" href="../php/pdf.php">PDF</a></li>
-                                    <li><a class="dropdown-item" href="../php/excel.php" target="_blank">Excell</a></li>
+                                    <li><a class="dropdown-item" href="php/pdf.php">PDF</a></li>
+                                    <li><a class="dropdown-item" href="php/excel.php" target="_blank">Excell</a></li>
                                   </ul>
                                 </div>                           
                           </div>
@@ -117,7 +117,7 @@
                 <h5 class="modal-title">Upload Image</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
               </div>
-              <form id="imageUploadForm" action="../php/handle_image.php" method="post" enctype="multipart/form-data">
+              <form id="imageUploadForm" action="php/handle_image.php" method="post" enctype="multipart/form-data">
               <div class="modal-body">
                       <div class="form-group md-5">
                           <label for="formFile" class="form-label costum-file-input">
@@ -141,15 +141,15 @@
     
         <!--drop zone-->
         <script>
-        const dropzone = new Dropzone("div.my-dropzone", { url: "../php/handle_image.php" });
+        const dropzone = new Dropzone("div.my-dropzone", { url: "php/handle_image.php" });
         </script>
       
       
       <!-- JQUERY -->
-      <script type="application/javascript" src="../js/jquery.min.js"></script>
+      <script type="application/javascript" src="js/jquery.min.js"></script>
       <!-- BOOTSTRAP FILES -->
-      <script type="application/javascript" src="../js/bootstrap.bundle.js"></script>
+      <script type="application/javascript" src="js/bootstrap.bundle.js"></script>
       <!-- PRODUCTS JS -->
-      <script type="application/javascript" src="../js/products.js"></script>
+      <script type="application/javascript" src="js/products.js?"></script>
   </body>
 </html>

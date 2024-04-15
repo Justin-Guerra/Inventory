@@ -63,7 +63,7 @@ $(document).ready(function(){
 
        $.ajax({
         type: "POST",
-        url: "../php/edit_product.php?",  
+        url: "php/edit_product.php?",  
         data: formData,
         contentType: false,
         processData: false,
@@ -87,7 +87,7 @@ $("#imageUploadForm").submit(function (e) {
 
     $.ajax({
         type: "POST",
-        url: "../php/image_db.php?id=" + productId,  
+        url: "php/image_db.php?id=" + productId,  
         data: formData,
         contentType: false,
         processData: false,
@@ -110,7 +110,7 @@ $("#imageUploadForm").submit(function (e) {
         
          let newStatus = (currentStatus === 1) ? 0 : 1;
 
-        $.post("../php/edit_status.php", {id: productId, status: newStatus},
+        $.post("php/edit_status.php", {id: productId, status: newStatus},
               function(json_response){
            
             let response = JSON.parse(json_response);
@@ -133,7 +133,7 @@ $(document).on('click', '.delete', function(){
         
         let productId = $(this).data('id');  
 
-        $.post("../php/delete.php", {id: productId},
+        $.post("php/delete.php", {id: productId},
               function(json_response){
            
             let response = JSON.parse(json_response);
@@ -156,7 +156,7 @@ $(document).on('click', '.delete', function(){
 function loadProducts(){
     if(debug)
         alert("Loading Products!");
-    $.get("../php/select_products.php", {}, function(json_response){
+    $.get("php/select_products.php", {}, function(json_response){
         
         let products_table = "";
         
@@ -217,7 +217,7 @@ function registerNewProduct(){
     //POST METHOD - USED TO SEND DATA
     //STRUCTURE BELOW
     //LINK , DATA TO BE SENT, FUNCTION TO RECIEVE DATA
-    $.post("../php/insert_product.php", form_data, function(json_response){
+    $.post("php/insert_product.php", form_data, function(json_response){
         let response = JSON.parse(json_response);
         if(response.success == 1){
             //CLOSE MODAL
